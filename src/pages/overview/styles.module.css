@@ -1,0 +1,131 @@
+.page { width: min(1500px, 100%); margin: 0 auto; padding: 31px 34px 44px; }
+.greeting { display: flex; align-items: flex-end; justify-content: space-between; gap: 18px; margin-bottom: 22px; }
+.date { color: #90897d; font-size: 14px; font-weight: 650; }
+.eyebrow { margin-top: 10px; color: var(--accent); font-size: 13px; font-weight: 800; letter-spacing: .1em; }
+.greeting h1 { margin-top: 3px; color: var(--brand); font-family: Georgia, "Times New Roman", serif; font-size: clamp(34px, 3.3vw, 44px); font-weight: 500; line-height: 1.12; letter-spacing: -.02em; }
+.greeting > div > p:last-child { margin-top: 6px; color: var(--muted); font-size: 15px; }
+.manager { display: flex; align-items: center; gap: 9px; margin-bottom: 2px; padding: 7px 13px 7px 7px; border: 1px solid var(--line); border-radius: 12px; background: #fffcf7; }
+.manager > span:first-child { width: 36px; height: 36px; display: grid; place-items: center; border-radius: 11px; background: #ede3d2; color: #766047; font-size: 13px; font-weight: 800; }
+.manager > span:last-child { display: grid; gap: 1px; }
+.manager strong { color: var(--brand); font-size: 14px; }
+.manager small { color: #8b8377; font-size: 13px; }
+.stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
+.statCard { position: relative; min-width: 0; min-height: 125px; display: flex; align-items: flex-start; gap: 12px; padding: 19px 17px; border: 1px solid var(--line); border-radius: 15px; background: var(--surface); }
+.statIcon { width: 39px; height: 39px; flex: 0 0 auto; display: grid; place-items: center; border-radius: 12px; background: #f5e8df; color: #ad6548; }
+.statIcon svg { width: 19px; height: 19px; }
+.statIcon.olive { background: #edf0e7; color: #72805c; }
+.statIcon.gold { background: #f5efdf; color: #a58243; }
+.statIcon.clay { background: #f4e7e2; color: #af6753; }
+.statCard > div { min-width: 0; display: grid; gap: 2px; }
+.statCard > div > p { color: #7b766b; font-size: 13px; font-weight: 650; }
+.statCard > div > strong { color: var(--brand); font-family: Georgia, "Times New Roman", serif; font-size: 28px; font-weight: 500; line-height: 1.1; }
+.statCard > div > strong small { font-family: var(--font-sans); font-size: 18px; }
+.statCard > div > small { color: #898477; font-size: 13px; }
+.statFoot { position: absolute; right: 14px; bottom: 13px; color: #9a9388; font-size: 13px; font-weight: 650; }
+.statFoot.collected { color: #74855e; }
+.statFoot.attention { color: #a95f48; }
+.mainGrid { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(340px, .88fr); gap: 16px; margin-top: 17px; align-items: stretch; }
+.rentCard, .workCard, .portfolioCard, .leaseCard { min-width: 0; border: 1px solid var(--line); border-radius: 17px; background: var(--surface); }
+.rentCard, .workCard { padding: 21px; }
+.sectionHead { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.sectionHead > div > p { color: #9b7c62; font-size: 13px; font-weight: 800; letter-spacing: .1em; }
+.sectionHead h2 { margin-top: 3px; color: var(--brand); font-family: Georgia, "Times New Roman", serif; font-size: 22px; font-weight: 500; }
+.sectionHead > a { display: inline-flex; align-items: center; gap: 6px; color: #98553d; font-size: 14px; font-weight: 750; white-space: nowrap; }
+.sectionHead > a svg { width: 15px; height: 15px; transition: transform .18s ease; }
+.sectionHead > a:hover svg { transform: translateX(3px); }
+.collectionValue { display: flex; align-items: baseline; gap: 9px; margin-top: 21px; }
+.collectionValue > strong { color: #474236; font-family: Georgia, "Times New Roman", serif; font-size: 29px; font-weight: 500; }
+.collectionValue > span { color: #7b7a67; font-size: 13px; font-weight: 650; }
+.collectionValue .collectionExpected { margin-left: auto; color: #8b867b; font-weight: 500; }
+.progress { height: 8px; margin-top: 10px; overflow: hidden; border-radius: 99px; background: #eee9df; }
+.progress > span { display: block; height: 100%; border-radius: inherit; background: linear-gradient(90deg, #ad6b4a, #d2a768); transition: width .2s ease; }
+.progressFoot { display: flex; justify-content: space-between; gap: 10px; margin-top: 6px; color: #8b8478; font-size: 13px; }
+.progressFoot span:first-child { color: #8c6742; font-weight: 750; }
+.rentList { margin-top: 20px; }
+.listHead { display: flex; align-items: center; justify-content: space-between; gap: 9px; padding-bottom: 7px; border-bottom: 1px solid #eee9df; }
+.listHead h3 { color: #4f4b42; font-size: 15px; }
+.listHead > span { color: #938d82; font-size: 13px; }
+.rentItem { min-height: 69px; display: grid; grid-template-columns: 36px minmax(110px, 1fr) auto auto; align-items: center; gap: 10px; border-bottom: 1px solid #f0ece5; }
+.tenantMark { width: 34px; height: 34px; display: grid; place-items: center; border-radius: 11px; background: #f1e8dd; color: #80634d; font-size: 13px; font-weight: 800; }
+.tenantInfo { min-width: 0; display: grid; gap: 3px; }
+.tenantInfo strong { overflow: hidden; color: #47443c; font-size: 14px; text-overflow: ellipsis; white-space: nowrap; }
+.tenantInfo span { overflow: hidden; color: #8a847a; text-overflow: ellipsis; white-space: nowrap; font-size: 13px; }
+.tenantInfo i, .requestCopy i, .leaseItem i { margin: 0 3px; color: #bbb3a7; font-style: normal; }
+.dueInfo { display: grid; justify-items: end; gap: 2px; }
+.dueInfo strong { color: #4a453b; font-size: 14px; }
+.dueInfo span { font-size: 13px; }
+.overdue { color: #aa5a4b; }
+.dueSoon { color: #a17b3f; }
+.markPaid { min-height: 33px; display: inline-flex; align-items: center; gap: 5px; padding: 6px 8px; border: 1px solid #dcdccc; border-radius: 8px; background: #fbfcf7; color: #72805c; font-size: 13px; font-weight: 700; }
+.markPaid svg { width: 14px; height: 14px; }
+.markPaid:hover { border-color: #b8c39e; background: #f1f4e9; }
+.clearMessage { display: flex; align-items: center; gap: 8px; padding: 20px 0; color: #70815f; font-size: 14px; }
+.clearMessage svg { width: 18px; height: 18px; }
+.workCard { background: #fcfaf5; }
+.workSummary { display: flex; align-items: center; gap: 10px; margin-top: 19px; padding: 12px; border: 1px solid #ebe4d8; border-radius: 12px; background: white; }
+.workIcon { width: 35px; height: 35px; display: grid; place-items: center; border-radius: 10px; background: #f3e8df; color: #b66c4a; }
+.workIcon svg { width: 18px; height: 18px; }
+.workSummary > div { min-width: 0; display: grid; gap: 2px; }
+.workSummary strong { color: #49453d; font-size: 14px; }
+.workSummary > div > span { color: #898276; font-size: 13px; }
+.urgentMark { margin-left: auto; padding: 5px 7px; border-radius: 7px; background: #f9ece6; color: #aa5d47; font-size: 13px; font-weight: 750; white-space: nowrap; }
+.requestList { margin-top: 9px; }
+.requestItem { min-height: 58px; display: grid; grid-template-columns: 9px minmax(0, 1fr) auto 15px; align-items: center; gap: 9px; border-bottom: 1px solid #eee8dd; }
+.priorityDot { width: 8px; height: 8px; border-radius: 50%; background: #87986c; }
+.priorityDot.urgent, .priorityDot.high { background: #c46b4f; }
+.priorityDot.normal { background: #b49b69; }
+.requestCopy { min-width: 0; display: grid; gap: 2px; }
+.requestCopy strong { overflow: hidden; color: #4b473e; text-overflow: ellipsis; white-space: nowrap; font-size: 13px; font-weight: 700; }
+.requestCopy small { overflow: hidden; color: #8e887e; text-overflow: ellipsis; white-space: nowrap; font-size: 13px; }
+.requestStatus { color: #7f8071; font-size: 13px; }
+.requestItem > svg { width: 15px; height: 15px; color: #a59e91; }
+.requestItem:hover .requestCopy strong { color: var(--accent); }
+.maintenanceLink { display: flex; align-items: center; gap: 7px; margin-top: 14px; color: #96553d; font-size: 14px; font-weight: 750; }
+.maintenanceLink svg { width: 16px; height: 16px; }
+.maintenanceLink svg:last-child { margin-left: auto; }
+.lowerGrid { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(320px, .82fr); gap: 16px; margin-top: 16px; }
+.portfolioCard, .leaseCard { padding: 20px; }
+.propertyGrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 11px; margin-top: 15px; }
+.propertyTile { min-width: 0; display: grid; grid-template-columns: 68px minmax(0, 1fr) 16px; align-items: center; gap: 11px; padding: 9px; border: 1px solid #eee9df; border-radius: 12px; background: white; transition: border-color .18s ease, transform .18s ease; }
+.propertyTile:hover { border-color: #d6b9a2; transform: translateY(-2px); }
+.propertyArt { position: relative; width: 68px; height: 68px; display: grid; place-items: center; overflow: hidden; border-radius: 10px; background: linear-gradient(145deg, #d7dfcf, #adb9a1); }
+.propertyArt::before, .propertyArt::after { position: absolute; bottom: 0; content: ""; width: 22px; height: 45px; border: 2px solid rgb(255 255 255 / 55%); border-bottom: 0; background: rgb(105 121 91 / 52%); }
+.propertyArt::before { left: 10px; }
+.propertyArt::after { right: 10px; height: 54px; }
+.propertyArt > span { z-index: 1; width: 24px; height: 24px; display: grid; place-items: center; border-radius: 8px; background: rgb(255 255 255 / 78%); color: #687a59; }
+.propertyArt svg { width: 14px; height: 14px; }
+.propertyArt > small { position: absolute; z-index: 2; inset: auto 4px 4px; color: #fff; font-size: 13px; font-weight: 750; text-shadow: 0 1px 3px rgb(0 0 0 / 45%); text-align: center; }
+.propertyArt.clay { background: linear-gradient(145deg, #e3c6b2, #bd896f); }
+.propertyArt.clay::before, .propertyArt.clay::after { background: rgb(145 88 65 / 50%); }
+.propertyArt.clay > span { color: #9a5b43; }
+.propertyArt.olive { background: linear-gradient(145deg, #d9dfc7, #a5ad83); }
+.propertyArt.olive::before, .propertyArt.olive::after { background: rgb(110 122 76 / 55%); }
+.propertyArt.olive > span { color: #6d794a; }
+.propertyArt.gold { background: linear-gradient(145deg, #e7d5ae, #bea36b); }
+.propertyArt.gold::before, .propertyArt.gold::after { background: rgb(147 116 58 / 52%); }
+.propertyArt.gold > span { color: #99773d; }
+.propertyInfo { min-width: 0; display: grid; gap: 3px; }
+.propertyInfo > strong { overflow: hidden; color: #46433b; text-overflow: ellipsis; white-space: nowrap; font-size: 14px; }
+.propertyInfo > span:not(.occupancyTrack) { display: flex; align-items: center; gap: 4px; overflow: hidden; color: #898477; text-overflow: ellipsis; white-space: nowrap; font-size: 13px; }
+.propertyInfo > span > svg { width: 13px; height: 13px; flex: 0 0 auto; }
+.occupancyTrack { height: 5px; display: block; margin-top: 4px; overflow: hidden; border-radius: 99px; background: #f0ece4; }
+.occupancyTrack i { height: 100%; display: block; border-radius: inherit; background: #8c9a6f; }
+.propertyInfo > small { color: #898477; font-size: 13px; }
+.propertyTile > svg { width: 15px; height: 15px; color: #a79e8e; }
+.leaseCard { background: #f2eee5; }
+.leaseList { margin-top: 11px; }
+.leaseItem { min-height: 62px; display: grid; grid-template-columns: 40px minmax(0, 1fr) auto; align-items: center; gap: 9px; border-bottom: 1px solid #e5ddd0; }
+.calendarDate { width: 37px; height: 42px; display: grid; justify-items: center; align-content: center; border: 1px solid #e5d7c4; border-radius: 9px; background: #fffaf1; color: #826746; line-height: 1.1; }
+.calendarDate strong { font-family: Georgia, serif; font-size: 18px; font-weight: 500; }
+.calendarDate small { font-size: 13px; font-weight: 750; }
+.leaseItem > span:nth-child(2) { min-width: 0; display: grid; gap: 3px; }
+.leaseItem > span:nth-child(2) strong { overflow: hidden; color: #4c473d; text-overflow: ellipsis; white-space: nowrap; font-size: 14px; }
+.leaseItem > span:nth-child(2) small { overflow: hidden; color: #898174; text-overflow: ellipsis; white-space: nowrap; font-size: 13px; }
+.expiry { display: inline-flex; align-items: center; gap: 5px; color: #897354; font-size: 13px; white-space: nowrap; }
+.expiry svg { width: 14px; height: 14px; }
+.leaseFooter { display: inline-flex; align-items: center; gap: 6px; margin-top: 13px; color: #90573f; font-size: 14px; font-weight: 750; }
+.leaseFooter svg { width: 15px; height: 15px; }
+.demoNote { margin-top: 15px; color: #938d82; font-size: 13px; text-align: right; }
+@media (max-width: 1150px) { .page { padding-inline: 24px; } .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); } .mainGrid, .lowerGrid { grid-template-columns: 1fr; } }
+@media (max-width: 720px) { .page { padding: 23px 17px 38px; } .greeting { align-items: flex-start; flex-direction: column; } .manager { align-self: flex-start; } .stats { gap: 10px; } .statCard { min-height: 119px; padding: 15px 12px; gap: 9px; } .statIcon { width: 34px; height: 34px; } .statCard > div > strong { font-size: 24px; } .statFoot { right: 10px; bottom: 10px; } .rentCard, .workCard, .portfolioCard, .leaseCard { padding: 17px; } .propertyGrid { grid-template-columns: 1fr; } }
+@media (max-width: 520px) { .page { padding-inline: 12px; } .greeting h1 { font-size: 34px; } .stats { grid-template-columns: 1fr 1fr; } .statCard { display: grid; grid-template-columns: 33px minmax(0, 1fr); align-content: start; gap: 7px; } .statCard > div > p { font-size: 13px; } .statCard > div > strong { font-size: 23px; } .statFoot { left: 12px; right: auto; bottom: 10px; } .sectionHead { align-items: flex-start; flex-direction: column; gap: 8px; } .sectionHead > a { align-self: flex-end; } .collectionValue { flex-wrap: wrap; gap: 4px 8px; } .collectionValue .collectionExpected { width: 100%; margin-left: 0; } .rentItem { grid-template-columns: 33px minmax(0, 1fr) auto; gap: 8px; padding: 9px 0; } .tenantMark { width: 31px; height: 31px; } .dueInfo { align-items: end; } .markPaid { grid-column: 2 / -1; justify-self: end; margin-top: -5px; } .progressFoot { align-items: flex-start; flex-direction: column; gap: 2px; } .workSummary { gap: 7px; padding: 9px; } .requestItem { grid-template-columns: 8px minmax(0, 1fr) 15px; gap: 7px; padding-block: 6px; } .requestStatus { grid-column: 2; grid-row: 2; } .requestItem > svg { grid-column: 3; grid-row: 1 / span 2; } .propertyTile { grid-template-columns: 58px minmax(0, 1fr) 14px; gap: 8px; padding: 7px; } .propertyArt { width: 58px; height: 62px; } .leaseItem { grid-template-columns: 39px minmax(0, 1fr); padding: 8px 0; } .expiry { grid-column: 2; } .demoNote { text-align: left; } }

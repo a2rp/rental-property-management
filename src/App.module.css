@@ -1,8 +1,115 @@
-.page { min-height: 100vh; display: grid; justify-items: center; align-content: center; gap: 15px; padding: 28px; background: var(--paper); color: var(--ink); text-align: center; }
-.mark { width: 58px; height: 58px; display: grid; place-items: center; border-radius: 18px; background: var(--brand); color: #f7ece0; }
-.mark svg { width: 26px; height: 26px; }
-.page > p { margin-top: 8px; color: var(--accent); font-size: 13px; font-weight: 800; letter-spacing: .14em; }
-.page h1 { max-width: 720px; color: var(--brand); font-family: Georgia, "Times New Roman", serif; font-size: clamp(38px, 7vw, 68px); font-weight: 500; line-height: 1.04; }
-.caption { color: var(--muted); font-size: 16px; }
-.status { display: inline-flex; align-items: center; gap: 8px; margin-top: 15px; padding: 10px 13px; border: 1px solid var(--line); border-radius: 99px; background: var(--surface); color: #76634d; font-size: 14px; }
-.status svg { width: 16px; height: 16px; color: var(--accent); }
+.appShell {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  background: var(--paper);
+
+  .mainContent {
+    width: 100%;
+    flex: 1;
+    padding-top: 82px;
+  }
+
+  .attentionList {
+    display: grid;
+    gap: 8px;
+  }
+
+  .attentionItem {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 13px;
+    padding: 13px;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: var(--surface);
+    text-align: left;
+    transition: border-color 160ms ease, box-shadow 160ms ease;
+
+    &:hover,
+    &:focus-visible {
+      border-color: #d0bca3;
+      box-shadow: 0 5px 18px rgb(41 40 35 / 7%);
+    }
+
+    > span:last-child {
+      display: grid;
+      gap: 3px;
+      min-width: 0;
+    }
+
+    strong {
+      font-size: 15px;
+    }
+
+    small {
+      color: var(--muted);
+      font-size: 13px;
+    }
+  }
+
+  .attentionIcon {
+    width: 40px;
+    height: 40px;
+    flex: 0 0 auto;
+    display: grid;
+    place-items: center;
+    border-radius: 12px;
+    background: var(--brand-soft);
+    color: var(--brand);
+    font-size: 18px;
+
+    &.danger {
+      background: #f8e8e4;
+      color: var(--danger);
+    }
+
+    &.warm {
+      background: #f6ead9;
+      color: var(--warning);
+    }
+
+    &.cool {
+      background: #e8eee6;
+      color: var(--success);
+    }
+  }
+
+  .allClear {
+    display: grid;
+    justify-items: center;
+    padding: 2rem 1rem;
+    color: var(--muted);
+    text-align: center;
+
+    > svg {
+      width: 34px;
+      height: 34px;
+      margin-bottom: 12px;
+      color: var(--olive);
+    }
+
+    h3 {
+      color: var(--ink);
+      font-size: 18px;
+    }
+
+    p {
+      margin-top: 4px;
+      font-size: 14px;
+    }
+  }
+
+  @media (max-width: 860px) {
+    .mainContent {
+      padding-top: 72px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .attentionItem {
+      transition: none;
+    }
+  }
+}

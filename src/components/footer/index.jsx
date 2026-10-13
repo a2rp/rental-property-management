@@ -1,4 +1,4 @@
-import { FaCodepen, FaCoffee, FaEnvelope, FaFacebookF, FaGithub, FaGlobe, FaHandHoldingHeart, FaLinkedinIn, FaPatreon, FaYoutube } from "react-icons/fa";
+﻿import { FaCodepen, FaCoffee, FaEnvelope, FaFacebookF, FaGithub, FaGlobe, FaHandHoldingHeart, FaLinkedinIn, FaPatreon, FaYoutube } from "react-icons/fa";
 import { Tooltip } from "react-tooltip";
 import styles from "./styles.module.css";
 
@@ -11,7 +11,7 @@ const links = [
   ["YouTube", "youtube.com/@ashishranjan-ashz", "https://www.youtube.com/@ashishranjan-ashz?sub_confirmation=1", FaYoutube],
   ["Email", "ash.ranjan09@gmail.com", "mailto:ash.ranjan09@gmail.com", FaEnvelope],
   ["Support", "a2rp-donation-page.netlify.app", "https://a2rp-donation-page.netlify.app/", FaHandHoldingHeart],
-  ["Buy Me a Coffee", "buymeacoffee.com/a2rp", "https://www.buymeacoffee.com/a2rp", FaCoffee],
+  ["Buy Me a Coffee", "buymeacoffee.com/ashishranjan", "https://www.buymeacoffee.com/ashishranjan", FaCoffee],
   ["Patreon", "patreon.com/ashishranjan", "https://www.patreon.com/ashishranjan", FaPatreon],
   ["Source code", "github.com/a2rp/rental-property-management", "https://github.com/a2rp/rental-property-management", FaGithub],
 ];
@@ -30,3 +30,4 @@ const Footer = () => (
 );
 
 export default Footer;
+

@@ -14,6 +14,9 @@
 .navLink.active { border-color: rgb(224 177 119 / 20%); background: rgb(224 177 119 / 12%); color: #f0c18c; }
 .navLink.active > svg { color: #f0c18c; }
 .actions { display: flex; align-items: center; gap: 12px; margin-left: auto; }
+.repository { min-height: 40px; display: inline-flex; align-items: center; gap: 7px; padding: 0 11px; border: 1px solid rgb(255 255 255 / 17%); border-radius: 10px; color: #eee8dd; font-size: 13px; font-weight: 700; text-decoration: none; transition: border-color .18s ease, background .18s ease, box-shadow .18s ease; }
+.repository svg { width: 16px; height: 16px; }
+.repository:hover, .repository:focus-visible { border-color: rgb(224 177 119 / 55%); background: rgb(255 255 255 / 6%); box-shadow: 0 0 0 3px rgb(224 177 119 / 12%); text-decoration: none; }
 .notification { position: relative; width: 40px; height: 40px; display: grid; place-items: center; border: 1px solid transparent; border-radius: 11px; background: transparent; color: #d7d0c4; }
 .notification svg { width: 19px; height: 19px; }
 .notification:hover { border-color: rgb(255 255 255 / 12%); background: rgb(255 255 255 / 6%); color: white; }
@@ -27,5 +30,6 @@
 .mobileNavigation { display: none; }
 @media (max-width: 1120px) { .topRow { gap: 14px; padding-inline: 22px; } .navigation { margin-left: 4px; } .navLink { gap: 6px; padding-inline: 10px; } .actions { gap: 8px; } }
 @media (max-width: 860px) { .header, .topRow { min-height: 72px; } .topRow { padding-inline: 17px; } .navigation { display: none; } .menuToggle { display: grid; } .mobileNavigation { position: absolute; inset: 72px 0 auto; display: grid; gap: 4px; padding: 10px 16px 15px; border-top: 1px solid rgb(255 255 255 / 9%); background: #312f2a; box-shadow: 0 18px 25px rgb(28 27 24 / 14%); } .mobileLink { min-height: 45px; display: flex; align-items: center; gap: 10px; padding: 0 11px; border: 1px solid transparent; border-radius: 9px; color: #ded8cd; font-size: 14px; font-weight: 650; } .mobileLink svg { width: 17px; height: 17px; color: #b5aa99; } .mobileLink.active { border-color: rgb(224 177 119 / 20%); background: rgb(224 177 119 / 12%); color: #f0c18c; } .mobileLink.active svg { color: #f0c18c; } }
-@media (max-width: 520px) { .topRow { padding-inline: 12px; gap: 8px; } .mark { width: 38px; height: 38px; } .brand strong { font-size: 19px; } .brand small { font-size: 13px; } .actions { gap: 4px; } .notification { width: 36px; height: 36px; } .addProperty { width: 39px; height: 39px; min-height: 39px; justify-content: center; padding: 0; } .addProperty span { display: none; } .avatar { display: none; } .menuToggle { width: 37px; height: 37px; } }
+@media (max-width: 520px) { .topRow { padding-inline: 12px; gap: 8px; } .mark { width: 38px; height: 38px; } .brand strong { font-size: 19px; } .brand small { font-size: 13px; } .actions { gap: 4px; } .repository { min-height: 36px; gap: 5px; padding-inline: 7px; font-size: 13px; } .repository svg { width: 15px; height: 15px; } .notification { width: 36px; height: 36px; } .addProperty { width: 39px; height: 39px; min-height: 39px; justify-content: center; padding: 0; } .addProperty span { display: none; } .avatar { display: none; } .menuToggle { width: 37px; height: 37px; } }
+@media (max-width: 370px) { .repository span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; } .repository { width: 36px; justify-content: center; padding: 0; } }
 @media (prefers-reduced-motion: reduce) { .header { transition: none; } }

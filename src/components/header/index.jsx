@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
-import { FiBell, FiFileText, FiGrid, FiHome, FiMenu, FiPlus, FiTool, FiX } from "react-icons/fi";
+import { FiBell, FiFileText, FiGithub, FiGrid, FiHome, FiMenu, FiPlus, FiTool, FiX } from "react-icons/fi";
 import styles from "./styles.module.css";
 
 const links = [
@@ -43,6 +43,7 @@ const Header = ({ unreadCount = 0, onOpenNotifications }) => {
         </nav>
 
         <div className={styles.actions}>
+          <a className={styles.repository} href="https://github.com/a2rp/rental-property-management" target="_blank" rel="noreferrer" aria-label="Repository on GitHub"><FiGithub aria-hidden="true" /><span>Repository</span></a>
           <button className={styles.notification} type="button" onClick={onOpenNotifications} aria-label={`Notifications${unreadCount ? `, ${unreadCount} new` : ""}`}>
             <FiBell aria-hidden="true" />{unreadCount > 0 && <span>{unreadCount}</span>}
           </button>

@@ -75,8 +75,8 @@ const Overview = ({ properties, leases, requests, onMarkPaid }) => {
           <div className={styles.sectionHead}><div><p>THE NEIGHBORHOODS</p><h2>Your properties</h2></div><Link to="/properties">Portfolio view <FiArrowRight aria-hidden="true" /></Link></div>
           <div className={styles.propertyGrid}>
             {properties.slice(0, 4).map((property) => <Link className={styles.propertyTile} to={`/properties?property=${property.id}`} key={property.id}>
-              <span className={`${styles.propertyArt} ${styles[property.accent]}`}><span><FiHome aria-hidden="true" /></span><small>{property.type}</small></span>
-              <span className={styles.propertyInfo}><strong>{property.name}</strong><span><FiMapPin aria-hidden="true" /> {property.city}</span><span className={styles.occupancyTrack}><i style={{ width: `${Math.round(property.occupied / property.units * 100)}%` }} /></span><small>{property.occupied} of {property.units} homes occupied</small></span>
+              <span className={`${styles.propertyArt} ${styles[property.accent]}`}><span><FiHome aria-hidden="true" /></span></span>
+              <span className={styles.propertyInfo}><strong>{property.name}</strong><span><FiMapPin aria-hidden="true" /> {property.city} <i>·</i> {property.type}</span><span className={styles.occupancyTrack}><i style={{ width: `${Math.round(property.occupied / property.units * 100)}%` }} /></span><small>{property.occupied} of {property.units} homes occupied</small></span>
               <FiChevronRight aria-hidden="true" />
             </Link>)}
           </div>

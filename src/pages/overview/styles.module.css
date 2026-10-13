@@ -94,7 +94,6 @@
 .propertyArt::after { right: 10px; height: 54px; }
 .propertyArt > span { z-index: 1; width: 24px; height: 24px; display: grid; place-items: center; border-radius: 8px; background: rgb(255 255 255 / 78%); color: #687a59; }
 .propertyArt svg { width: 14px; height: 14px; }
-.propertyArt > small { position: absolute; z-index: 2; inset: auto 4px 4px; color: #fff; font-size: 13px; font-weight: 750; text-shadow: 0 1px 3px rgb(0 0 0 / 45%); text-align: center; }
 .propertyArt.clay { background: linear-gradient(145deg, #e3c6b2, #bd896f); }
 .propertyArt.clay::before, .propertyArt.clay::after { background: rgb(145 88 65 / 50%); }
 .propertyArt.clay > span { color: #9a5b43; }

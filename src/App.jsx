@@ -119,7 +119,7 @@ const App = () => {
       ? { ...existing, ...input, ...(existing.rentStatus === "Paid" ? { rentStatus: "Due soon", rentDue: dayOffset(0), paidOn: undefined } : {}) }
       : {
         ...input,
-        id: `LS-${Math.max(2400, ...leases.map((lease) => Number(lease.id.replace("LS-", "")) || 0) + 1)}`,
+        id: `LS-${Math.max(2400, ...leases.map((lease) => Number(lease.id.replace("LS-", "")) || 0)) + 1}`,
         status: "Active",
         rentStatus: "Due soon",
         rentDue: dayOffset(0),

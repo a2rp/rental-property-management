@@ -1,0 +1,8 @@
+.page { min-height: 100vh; display: grid; justify-items: center; align-content: center; gap: 15px; padding: 28px; background: var(--paper); color: var(--ink); text-align: center; }
+.mark { width: 58px; height: 58px; display: grid; place-items: center; border-radius: 18px; background: var(--brand); color: #f7ece0; }
+.mark svg { width: 26px; height: 26px; }
+.page > p { margin-top: 8px; color: var(--accent); font-size: 13px; font-weight: 800; letter-spacing: .14em; }
+.page h1 { max-width: 720px; color: var(--brand); font-family: Georgia, "Times New Roman", serif; font-size: clamp(38px, 7vw, 68px); font-weight: 500; line-height: 1.04; }
+.caption { color: var(--muted); font-size: 16px; }
+.status { display: inline-flex; align-items: center; gap: 8px; margin-top: 15px; padding: 10px 13px; border: 1px solid var(--line); border-radius: 99px; background: var(--surface); color: #76634d; font-size: 14px; }
+.status svg { width: 16px; height: 16px; color: var(--accent); }

@@ -55,7 +55,8 @@ const Leases = ({ leases, properties, onSaveLease, onMarkRentPaid, onEndLease, n
     if (!Number.isFinite(Number(form.rent)) || Number(form.rent) <= 0) nextErrors.rent = "Enter a rent amount above zero.";
     if (!Number.isFinite(Number(form.deposit)) || Number(form.deposit) < 0) nextErrors.deposit = "Enter a valid deposit amount.";
     if (!Number.isInteger(Number(form.dueDay)) || Number(form.dueDay) < 1 || Number(form.dueDay) > 28) nextErrors.dueDay = "Choose a day from 1 to 28.";
-    if (!form.starts || !form.ends || form.ends <= form.starts) nextErrors.ends = "The lease end must be after the start date.";
+    if (!form.starts) nextErrors.starts = "Choose a lease start date.";
+    if (!form.ends || (form.starts && form.ends <= form.starts)) nextErrors.ends = "The lease end must be after the start date.";
     setErrors(nextErrors);
     if (Object.values(nextErrors).some(Boolean)) { notify("error", "Please review the lease details."); return; }
     const saved = onSaveLease({ ...form, tenant: form.tenant.trim(), email: form.email.trim(), unit: form.unit.trim(), rent: Number(form.rent), deposit: Number(form.deposit), dueDay: Number(form.dueDay) }, dialog.lease?.id);
@@ -115,7 +116,7 @@ const Leases = ({ leases, properties, onSaveLease, onMarkRentPaid, onEndLease, n
           <label className={styles.field}>Monthly rent<input type="number" min="1" step="25" value={form.rent} onChange={(event) => updateField("rent", event.target.value)} aria-invalid={!!errors.rent} />{errors.rent && <span>{errors.rent}</span>}</label>
           <label className={styles.field}>Security deposit<input type="number" min="0" step="25" value={form.deposit} onChange={(event) => updateField("deposit", event.target.value)} aria-invalid={!!errors.deposit} />{errors.deposit && <span>{errors.deposit}</span>}</label>
           <label className={styles.field}>Rent due day<input type="number" min="1" max="28" value={form.dueDay} onChange={(event) => updateField("dueDay", event.target.value)} aria-invalid={!!errors.dueDay} />{errors.dueDay && <span>{errors.dueDay}</span>}</label>
-          <label className={styles.field}>Lease start<input type="date" value={form.starts} onChange={(event) => updateField("starts", event.target.value)} aria-invalid={!!errors.ends} /></label>
+          <label className={styles.field}>Lease start<input type="date" value={form.starts} onChange={(event) => updateField("starts", event.target.value)} aria-invalid={!!errors.starts} />{errors.starts && <span>{errors.starts}</span>}</label>
           <label className={styles.field}>Lease end<input type="date" min={form.starts} value={form.ends} onChange={(event) => updateField("ends", event.target.value)} aria-invalid={!!errors.ends} />{errors.ends && <span>{errors.ends}</span>}</label>
           <div className={styles.formNote}><FiUser aria-hidden="true" /><span>Resident data is fictional and stays in this page session.</span></div>
           <div className={styles.formFoot}><button className={styles.secondary} type="button" onClick={closeDialog}>Go back</button><button className={styles.primary} type="submit">{dialog.lease ? "Save lease updates" : "Add lease"}</button></div>

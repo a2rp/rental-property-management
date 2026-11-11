@@ -115,8 +115,9 @@ const App = () => {
       notify("error", `${property.name} has no vacant units available.`);
       return false;
     }
+    const rentAmountChanged = existing && Number(existing.rent) !== input.rent;
     const updated = existing
-      ? { ...existing, ...input, ...(existing.rentStatus === "Paid" ? { rentStatus: "Due soon", rentDue: dayOffset(0), paidOn: undefined } : {}) }
+      ? { ...existing, ...input, ...(existing.rentStatus === "Paid" && rentAmountChanged ? { rentStatus: "Due soon", rentDue: dayOffset(0), paidOn: undefined } : {}) }
       : {
         ...input,
         id: `LS-${Math.max(2400, ...leases.map((lease) => Number(lease.id.replace("LS-", "")) || 0)) + 1}`,
